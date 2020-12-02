@@ -16,11 +16,17 @@ printArray(arr);
 arr.push(13);
 printArray(arr);
 
-arr.push(17, 12, 42);
+var l = arr.push(17, 12, 42);
 printArray(arr);
+document.write(l + "<br />");
 
 var el = arr.pop();
 printArray(arr);
 document.write(el + "<br />");
 
+arr.unshift(1, 2, 3);
+printArray(arr);
 
+var el1 = arr.shift();
+printArray(arr);
+document.write(el1 + "<br />");
