@@ -27,7 +27,7 @@ function objToString(obj) {
   return obj;
 }
 
-var arr = [1, 5, 7, 2, 0, -1, 8];
+/*var arr = [1, 5, 7, 2, 0, -1, 8];
 printArray(arr);
 
 arr.push(13);
@@ -54,7 +54,7 @@ printArray(arr);
 arr.sort((a, b) => {
   return a - b;
 });
-printArray(arr);
+printArray(arr);*/
 
 var people = [
   {
@@ -106,11 +106,44 @@ var peopleWithSkinColor = people.map((el) => {
 });
 printArray(peopleWithSkinColor);
 
-let numbers = [5, 3, 1, 4, 2];
+var filteredPeople = peopleWithSkinColor.filter((human) => {
+  return !(["orange", "white", "blue"].includes(human.skin));
+});
+printArray(filteredPeople);
+
+/*let numbers = [5, 3, 1, 4, 2];
 let squares = numbers.map((a) => {
   return a**2; // a*a
 }).sort((a, b) => {
   return a - b;
 });
 printArray(numbers);
-printArray(squares);
+printArray(squares);*/
+
+let numbers = [5, 3, 1, 4, 2];
+printArray(numbers);
+//printArray(numbers.filter(a => a%2 ));
+
+//document.write(Array.isArray(numbers));
+//document.write(Array.isArray(123));
+
+document.write(
+  numbers.reduce(
+    (sum, el, index/*, arr*/) => {
+      if (index%2 == 0) {
+        return sum + el;
+      }
+
+      return sum;
+    },
+    0
+  )
+);
+
+var obj = [
+  "Elena",
+  "female",
+  19
+];
+console.log(obj);
+console.log(obj.values());
