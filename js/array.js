@@ -19,4 +19,8 @@ printArray(arr);
 arr.push(17, 12, 42);
 printArray(arr);
 
+var el = arr.pop();
+printArray(arr);
+document.write(el + "<br />");
+
 
